@@ -16,6 +16,7 @@
     "@babel/preset-env": "^7.22.7",
     "@babel/preset-typescript": "^7.22.5",
     "@types/jest": "^29.5.3",
+    "@types/node-fetch": "^2.6.4",
     "@types/whatwg-fetch": "^0.0.33",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
@@ -36,7 +37,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "node-fetch": "^3.3.1",
+    "node-fetch": "^2.6.6",
     "undici": "^5.22.1"
   }
 }
