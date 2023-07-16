@@ -3,18 +3,9 @@ import fetch from 'node-fetch';
 
 
 
-async function getAuthToken(username: string, password: string) {
-    const url: string = 'https://back.glsystem.net/api/v1/auth/login/'
-    // const response = await fetch('https://back.glsystem.net/api/v1/docs/#/auth/auth_login_create', {
-    //     method: 'POST',
-    //     headers: {
-    //         'content-type': 'application/json;charset=UTF-8',
-    //     },
-    //     body: JSON.stringify({
-    //         username: username,
-    //         password: password
-    //     }),
-    // });
+async function getRefreshedAuthToken(refresh_token: string) {
+    const url: string = 'https://back.glsystem.net/api/v1/auth/refresh/' //request URL
+
 
     const options = {
         method: 'POST',
@@ -23,15 +14,13 @@ async function getAuthToken(username: string, password: string) {
             'content-type': 'application/json;charset=UTF-8'
         },
         body: JSON.stringify({
-            "username": username,
-            "password": password
+            "refresh_token": refresh_token
         }),
     }
 
     try {
         const response = await fetch(url, options);
         return response.json().then(data => data.access_token ? data.access_token : data)
-        // return response.json()
     } catch (error) {
         return error
     }
@@ -48,4 +37,4 @@ async function getAuthToken(username: string, password: string) {
 
 
 
-export default getAuthToken;
+export default getRefreshedAuthToken;
