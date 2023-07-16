@@ -6,6 +6,7 @@ import createNewCargo from './createNewCargo';
 import { CargoData } from './types';
 import getCargoInfoById from './getCargoInfoById';
 import updateCargoById from './updateCargoById';
+import deleteCargoById from './deleteCargoById';
 // getAuthToken('suyanovaltan@gmail.com', 'bqSJt2wpgA').then(data => console.log(data))
 
 let token: string = '';
@@ -50,6 +51,8 @@ const updatedInput: CargoData = {
     "demo": false
 }
 
-// createNewCargo('d5cc1555c7bca64bc59641b2fe342e71f3bf8a21', input).then(data => console.log(data));
-getCargoInfoById('d5cc1555c7bca64bc59641b2fe342e71f3bf8a21', 15180).then(data => console.log(data))
+createNewCargo('d5cc1555c7bca64bc59641b2fe342e71f3bf8a21', input).then(data => console.log(data));
+// getCargoInfoById('d5cc1555c7bca64bc59641b2fe342e71f3bf8a21', 15180).then(data => console.log(data))
 // updateCargoById('d5cc1555c7bca64bc59641b2fe342e71f3bf8a21', 15180, input).then(data => console.log(data))
+
+deleteCargoById('d5cc1555c7bca64bc59641b2fe342e71f3bf8a21', 15181).then(data => console.log(data));
