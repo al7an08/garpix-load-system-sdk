@@ -4,6 +4,8 @@ import getRefreshedAuthToken from './getRefreshedAuthToken'
 import getCargo from './getCargo';
 import createNewCargo from './createNewCargo';
 import { CargoData } from './types';
+import getCargoInfoById from './getCargoInfoById';
+import updateCargoById from './updateCargoById';
 // getAuthToken('suyanovaltan@gmail.com', 'bqSJt2wpgA').then(data => console.log(data))
 
 let token: string = '';
@@ -32,4 +34,22 @@ const input: CargoData = {
     "demo": true
 }
 
-createNewCargo('d5cc1555c7bca64bc59641b2fe342e71f3bf8a21', input).then(data => console.log(data));
+const updatedInput: CargoData = {
+    "title": "test11",
+    "length": 11,
+    "width": 11,
+    "height": 1000,
+    "mass": 100,
+    "stacking": false,
+    "stacking_limit": 32767,
+    "turnover": false,
+    "article": "supertest",
+    "margin_length": 32767,
+    "margin_width": 32767,
+    "color": "#Ba0fbf",
+    "demo": false
+}
+
+// createNewCargo('d5cc1555c7bca64bc59641b2fe342e71f3bf8a21', input).then(data => console.log(data));
+getCargoInfoById('d5cc1555c7bca64bc59641b2fe342e71f3bf8a21', 15180).then(data => console.log(data))
+// updateCargoById('d5cc1555c7bca64bc59641b2fe342e71f3bf8a21', 15180, input).then(data => console.log(data))
