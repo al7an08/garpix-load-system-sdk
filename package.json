@@ -1,7 +1,7 @@
 {
   "name": "garpix-load-system-sdk",
-  "version": "2.0.0",
-  "description": "",
+  "version": "3.0.1",
+  "description": "SDK for GLS API",
   "main": "garpix-load-system-sdk.ts",
   "scripts": {
     "dev": "webpack --env development --watch",
