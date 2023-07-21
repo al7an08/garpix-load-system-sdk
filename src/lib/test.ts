@@ -8,7 +8,9 @@ import getCargoInfoById from './getCargoInfoById';
 import updateCargoById from './updateCargoById';
 import deleteCargoById from './deleteCargoById';
 import createNewCalculation from './createNewCalculation';
-// getAuthToken('suyanovaltan@gmail.com', 'bqSJt2wpgA').then(data => console.log(data))
+
+
+getAuthToken('suyanovaltan@gmail.com', 'bqSJt2wpgA').then(data => console.log(data))
 
 let token: string = '';
 

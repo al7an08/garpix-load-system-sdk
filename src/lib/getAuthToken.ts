@@ -20,7 +20,7 @@ async function getAuthToken(username: string, password: string) {
 
     try {
         const response = await fetch(url, options);
-        return response.json().then(data => data.access_token ? data.access_token : data)
+        return response.json()
         // return response.json()
     } catch (error) {
         return error
